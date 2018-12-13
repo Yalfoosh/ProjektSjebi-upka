@@ -3,5 +3,5 @@
 SendMode Input
 
 ^p::
-Send, %clipboard%
+Send, % RegExReplace(clipboard, "\r\n?|\n\r?", "`n")
 	return
