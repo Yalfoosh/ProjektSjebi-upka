@@ -1,16 +1,9 @@
 ﻿#NoEnv
 #Warn
 SendMode Input
-SetWorkingDir %A_ScriptDir%
 
 ^p::
-FileRead, TextToPaste, %A_ScriptDir%\upisi.txt
-if not ErrorLevel
-{
-	Send, %TextToPaste%
+InputBox, UserInput, Bamboozlaj Čupića, Copy-pasteaj što već treba:, 32, 512
+
+Send, %UserInput%
 	return
-}
-else
-{
-	MsgBox, Stvori upisi.txt i napiši unutra s čim već želiš sjebat Čupića.
-}
